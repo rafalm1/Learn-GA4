@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdn.tiny.cloud/1/19ppvmppn6bxyrjs3ggszrci1vzbwpym98ry3aonjxud4ps2/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script
+      src="https://cdn.tiny.cloud/1/19ppvmppn6bxyrjs3ggszrci1vzbwpym98ry3aonjxud4ps2/tinymce/6/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -25,21 +28,14 @@
   <body>
     <div>
       <a href="https://rafalm1.github.io/Learn-GA4/about.html">about</a>
-        <video
-        loop
-        autoplay
-        preload="metadata"
-        muted
-        playsinline
-      >
-        <source
-          src="./test.mp4"
-          type="video/mp4"
-        />
+      <video id="video" loop preload="metadata" muted playsinline autoplay>
+        <source src="./test.mp4" type="video/mp4" />
       </video>
-      <textarea>
-        
-     </textarea>
+
+      <video autoplay playsinline loop muted preload="auto">
+        <source src="./loader.webm" type="video/webm" />
+      </video>
+      <textarea> </textarea>
       <!-- <h1>Hello Learn GA4</h1>
       <button id="login-button" onclick="dataLayer.push({'event': 'login'})">
         Login
@@ -131,13 +127,24 @@
       <h2 id="header-with-id">header with an id</h2> -->
     </div>
 
-    <script>
+    <!-- <script>
+      const video = document.getElementById("video")
+      video.addEventListener("click", () => {
+        
+      })
+
+      video.play().then(()=> {
+        console.log('play success')
+      }).catch((err)=>{
+        console.log('error success')
+      })
+
       tinymce.init({
         selector: 'textarea',
         height: 800,
         plugins: 'table powerpaste',
         powerpaste_html_import: 'prompt',
       });
-    </script>
+    </script> -->
   </body>
 </html>
